@@ -8,7 +8,8 @@ Ideas: https://automatetheboringstuff.com/
 - [ ] Setup: IDE, Tools
   - [ ] [PyCharm](https://www.jetbrains.com/pycharm/)
   - [ ] [Mu](https://codewith.mu/en/download)
-  - [X] ~~Git?~~
+  - [ ] [VS Code](https://code.visualstudio.com/)
+  - [X] ~~Git?~~ takes too much time
   - [ ] Fallback: https://www.online-python.com/, GitPod
 - [ ] Content
   - [ ] Experience the power of coding and how it can help you with your daily work.
