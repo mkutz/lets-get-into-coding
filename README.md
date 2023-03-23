@@ -1,7 +1,5 @@
 # Let's get Into Coding
 
-
-
 Ideas: https://automatetheboringstuff.com/
 
 
@@ -27,3 +25,61 @@ Ideas: https://automatetheboringstuff.com/
   - Setup
   - Objectives (incl. "Cheat Sheets")
   - Further reading, Slack channel, etc.
+
+
+## Agenda
+
+10:45 – 12:30
+
+| Time  | What                                                                                                                |
+| ----- | ------------------------------------------------------------------------------------------------------------------- |
+| 10:45 | Welcome, introduction, setup instructions (slides), pairup people without computer, get everyone into Slack channel |
+| 11:00 | Hands-on setup together: IDE, Python, Shell                                                                         |
+| 11:15 | First task: GET https://restful-booker.herokuapp.com/apidoc/index.html#api-Ping-Ping                                |
+| 11:35 | Present instructions for second task along with needed docs: Parse info from response/local file (JSON, XML)        |
+| 11:45 | Short break for those who need one (?)                                                                              |
+| 12:00 | Present solution for second task                                                                                    |
+| 12:10 | Present instructions for further tasks, let everybody work on them                                                  |
+| 12:25 | Debrief, collect feedback, encourage to go on and find help on Slack                                                |
+
+
+## Setup
+
+We will use Python as the programming language and CS Code as the IDE/Editor in this course.
+
+Both are quite popular tools, used by many developers.
+Having them setup will help you go further in getting into coding.
+
+1. Login to Slack and join the channel `#`
+2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
+3. Setup CS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
+
+## Objectives
+
+### 1. Check Your Setup
+
+1. Open [hello-wold.py](hello-world.py) in VS Code and understand its content.\
+   Feel free to ask any questions you might have!
+
+2. Open a termin in VS code (Menu: Terminal → New Terminal).\
+   It should at the lower end of the VS code window.
+
+3. Enter the following in the terminal:
+
+   ```bash
+   python hello-world.py
+   ```
+  
+   The output should be
+
+   ```plain
+   Hello World!
+   ```
+
+  Please ask for help if it doesn't work.
+
+
+### 2. Perform Your First Request
+
+1. Create a new file `request-booking-ids.py`.
+2. …
