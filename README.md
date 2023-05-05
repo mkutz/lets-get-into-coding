@@ -62,6 +62,44 @@ Having them setup will help you go further in getting into coding.
 2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
 3. Setup CS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
+### Setup Train Reservation Services
+
+1. Clone [kata-train-reservation](https://github.com/rewe-digital-incubator/kata-train-reservation):
+
+   ```bash
+   git clone git@github.com:rewe-digital-incubator/kata-train-reservation.git
+   ```
+
+2. Change the current directory to be `kata-train-reservation`:
+
+   ```bash
+   cd kata-train-reservation
+   ```
+
+3. In this directory, install train reservation services including dependencies:
+
+   ```bash
+  python3 -m venv venv  --upgrade-deps
+  source venv/bin/activate
+  pip install -r requirements.txt
+  pip install .
+   ```
+
+4. Open a new terminal, change the current directory to be `kata-train-reservation`, and start the `train_data_service`:
+
+   ```bash
+   train_data_service --port 8081 trains.json
+   ```
+
+5. Open another terminal, also change the current directory to be `kata-train-reservation`, and start the `booking_reference_service`:
+
+   ```bash
+   booking_reference_service --port 8082
+   ```
+
+6. You can now make HTTP requests like described [here](https://github.com/rewe-digital-incubator/kata-train-reservation#sample-clients).
+
+
 ## Objectives
 
 ### 1. Check Your Setup
