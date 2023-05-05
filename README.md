@@ -27,6 +27,14 @@ Ideas: https://automatetheboringstuff.com/
   - Further reading, Slack channel, etc.
 
 
+USB Stick Content
+- Python Installer: <https://www.python.org/downloads/>
+- VS Code Installer: <https://code.visualstudio.com/download>
+- Zipped venv with all dependencies per OS
+- Python Extension: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>
+- Assets for exercises
+- Train Reservation Backend: <https://github.com/rewe-digital-incubator/kata-train-reservation>
+
 ## Agenda
 
 10:45 – 12:30
