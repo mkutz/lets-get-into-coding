@@ -1,1 +1,4 @@
+CherryPy
+click
+pytest
 requests

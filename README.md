@@ -62,42 +62,43 @@ Having them setup will help you go further in getting into coding.
 2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
 3. Setup CS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
-### Setup Train Reservation Services
+### Start the Train Reservation Services
 
-1. Clone [kata-train-reservation](https://github.com/rewe-digital-incubator/kata-train-reservation):
+```bash
+python train_reservation/main.py
+```
 
-   ```bash
-   git clone git@github.com:rewe-digital-incubator/kata-train-reservation.git
-   ```
+This will start a simple train reservation service with in-memory data, using port 8080.
+You can use a different port if needed via the command line option `--port <custom_port>`
 
-2. Change the current directory to be `kata-train-reservation`:
+### Using the Train Reservation Service
 
-   ```bash
-   cd kata-train-reservation
-   ```
+Check for free seats on the train "express_2000":
 
-3. In this directory, install train reservation services including dependencies:
+```bash
+curl http://127.0.0.1:8080/train-data/trains/express_2000
+```
 
-   ```bash
-  python3 -m venv venv  --upgrade-deps
-  source venv/bin/activate
-  pip install -r requirements.txt
-  pip install .
-   ```
+Get a booking reference:
 
-4. Open a new terminal, change the current directory to be `kata-train-reservation`, and start the `train_data_service`:
+```bash
+curl http://127.0.0.1:8080/booking_reference
+```
 
-   ```bash
-   train_data_service --port 8081 trains.json
-   ```
+Book a seat:
 
-5. Open another terminal, also change the current directory to be `kata-train-reservation`, and start the `booking_reference_service`:
+```bash
+curl http://127.0.0.1:8080/train-data/reserve \
+  --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"train_id": "express_2000", "seats": ["1A"], "booking_reference": "01234567"}'
+```
 
-   ```bash
-   booking_reference_service --port 8082
-   ```
+Remove all seat reservations for train "express_2000":
 
-6. You can now make HTTP requests like described [here](https://github.com/rewe-digital-incubator/kata-train-reservation#sample-clients).
+```bash
+curl http://127.0.0.1:8080/train-data/reset/express_2000
+```
 
 
 ## Objectives
