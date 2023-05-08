@@ -19,6 +19,19 @@ class TrainDataServiceTest(helper.CPWebCase):
         )
 
 
+class ListTrainsTest(TrainDataServiceTest):
+    @staticmethod
+    def setup_server():
+        train_data = json.dumps(
+            {"test_train_1": {}, "test_train_2": {}})
+        cherrypy.tree.mount(TrainDataService(train_data))
+
+    def test_fetch_trains(self):
+        self.getPage("/trains")
+        self.assertStatus(200)
+        self.assertInBody('["test_train_1", "test_train_2"]')
+
+
 class EmptyTrainTest(TrainDataServiceTest):
     @staticmethod
     def setup_server():

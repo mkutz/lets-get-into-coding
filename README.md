@@ -60,9 +60,33 @@ Having them setup will help you go further in getting into coding.
 
 1. Login to Slack and join the channel `#`
 2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
-3. Setup CS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
+3. Setup VS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
-### Start the Train Reservation Services
+
+## Install Dependencies
+
+1. Create a virtual environment in this project directory:
+
+```shell script
+python3 -m venv venv --upgrade-deps
+```
+
+2. Activate the virtual environment:
+
+```shell script
+source venv/bin/activate
+```
+
+3. Install required packages:
+
+```shell script
+pip install -r requirements.txt
+```
+
+## Train Reservation Service
+
+
+### Start the Services
 
 ```bash
 python train_reservation/main.py
@@ -71,7 +95,14 @@ python train_reservation/main.py
 This will start a simple train reservation service with in-memory data, using port 8080.
 You can use a different port if needed via the command line option `--port <custom_port>`
 
-### Using the Train Reservation Service
+
+### Using the Service
+
+List all available trains:
+
+```bash
+curl http://127.0.0.1:8080/train-data/trains
+```
 
 Check for free seats on the train "express_2000":
 

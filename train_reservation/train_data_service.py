@@ -14,7 +14,9 @@ class TrainDataService:
 
     @cherrypy.expose()
     @cherrypy.tools.json_out()
-    def trains(self, train_id):
+    def trains(self, train_id=""):
+        if train_id == "":
+            return list(self.train_data.keys())
         with cherrypy.HTTPError.handle(KeyError, 404):
             return self.train_data[train_id]
 
