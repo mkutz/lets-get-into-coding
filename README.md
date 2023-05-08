@@ -97,7 +97,8 @@ curl http://127.0.0.1:8080/train-data/reserve \
 Remove all seat reservations for train "express_2000":
 
 ```bash
-curl http://127.0.0.1:8080/train-data/reset/express_2000
+curl http://127.0.0.1:8080/train-data/reset/express_2000 \
+  --request POST
 ```
 
 

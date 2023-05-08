@@ -48,6 +48,9 @@ class TrainDataService:
     @cherrypy.expose()
     @cherrypy.tools.json_out()
     def reset(self, train_id):
+        if cherrypy.request.method != "POST":
+            raise cherrypy.HTTPError(405, 'Method Not Allowed')
+
         with cherrypy.HTTPError.handle(KeyError, 404):
             train = self.train_data[train_id]
 

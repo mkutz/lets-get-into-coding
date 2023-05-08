@@ -108,6 +108,14 @@ class ReservedTrainTest(TrainDataServiceTest):
         self.assertInBody('"booking_reference": "existing"')
 
     def test_reset(self):
-        self.getPage("/reset/test_train")
+        self.post("/reset/test_train", json.dumps({}))
         self.assertStatus(200)
         self.assertNotInBody("existing")
+
+    def test_reset_unknown(self):
+        self.post("/reset/unknown_train", json.dumps({}))
+        self.assertStatus(404)
+
+    def test_reset_get(self):
+        self.getPage("/reset/test_train")
+        self.assertStatus(405)
