@@ -162,3 +162,22 @@ curl http://127.0.0.1:8080/train-data/reset/express_2000 \
 
 1. Create a new file `request-booking-ids.py`.
 2. …
+
+
+# Ideas and Notes
+
+## Train Reservation Service
+
+- Create a script that creates some random bookings
+- Add support for POST /train-data/reset to reset all train data
+- Use train_data_service.py for code reading?
+- Possible excersies
+  - print a list of the train IDs of all available trains
+  - print a list which for each train lists all reserved seats
+  - print a list which for each train lists the persentage of reserved seats per coach, and for the whole train
+  - create a script that books a specific seat on a specific train
+  - create a script that books a specified number of seats in a specified train
+  - Add some [business rules](https://github.com/emilybache/KataTrainReservation#business-rules-around-reservations):
+    - All seats must be in the same coach
+    - At most 70 % of the seats of a given train may be reserved
+    - If possible, only 70 % of the seats of a coach should be reserved 
