@@ -61,7 +61,9 @@ Both are quite popular tools, used by many developers.
 Having them setup will help you go further in getting into coding.
 
 1. Login to Slack and join the channel `#`
+   
 2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
+   
 3. Setup VS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 
@@ -85,40 +87,13 @@ Having them setup will help you go further in getting into coding.
    pip install -r requirements.txt
    ```
 
-
-### Start the Train Reservation Service
-
-1. Start the train reservation service by running
-  
+4. You should now be able to run `python` (without `3`):
+   
    ```bash
-   python train_reservation/main.py
+   python --version
    ```
 
-   This will start a simple train reservation service with in-memory data, using port 8080.
-
-   <details>
-   <summary>
-     If you get the error <code>cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')</code>
-   </summary>
-
-   ```log
-   ENGINE Shutting down due to error in start listener:
-   Traceback (most recent call last):
-     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 268, in start
-       self.publish('start')
-     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 248, in publish
-       raise exc
-   cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')
-   ```
-
-   you can use a different port if needed via the command line option `--port <custom_port>`. E.g.
-
-   ```bash
-   python train_reservation/main.py --port 9090
-   ```
-   </details>
-
-   You can stop the service by pressing <kbd>^</kbd> + <kbd>C</kbd> on MacOS or <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+   Should return something like `Python 3.11.3`.
 
 
 #### Using the Service
@@ -157,6 +132,8 @@ curl http://127.0.0.1:8080/train-data/reset/express_2000 \
   --request POST
 ```
 
+You can stop the service by pressing <kbd>^</kbd> + <kbd>C</kbd> on MacOS or <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+
 
 ## Objectives
 
@@ -183,10 +160,104 @@ curl http://127.0.0.1:8080/train-data/reset/express_2000 \
   Please ask for help if it doesn't work.
 
 
-### 2. Perform Your First Request
+### 2. Add Parameters
 
-1. Create a new file `request-booking-ids.py`.
-2. …
+Content:
+
+- sys.argv
+- arrays, len
+- if/else
+- print
+- string interpolation/formatted strings
+
+1. Copy [hello-wold.py](hello-world.py) to a new file [hello-you.py](hello-you.py)
+   
+   ```bash
+   cp hello-world.py hello-you.py
+   ```
+
+2. Change the code to take an argument, which is printed instead of "World".
+
+   E.g. for `python hello-you.py "Agile Testing Days"` it should print
+
+   ```plain
+   Hello AgileTD!
+   ```
+
+3. If no argument is given (`python hello-you.py`), print
+
+   ```plain
+   Hello you!
+   ```
+
+4. If more then one argument is given (e.g. `python hello-you.py Stefan Micha`), print
+   
+   ```plain
+   Hello Stefan and Micha!
+   ```
+
+
+### 3. Return all Trains
+
+Content:
+
+- requests, json
+- for in
+
+1. Start the train reservation service by running
+  
+   ```bash
+   python train_reservation/main.py
+   ```
+
+   This will start a simple train reservation service with in-memory data, using port 8080.
+
+   <details>
+   <summary>
+     If you get the error <code>cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')</code>
+   </summary>
+
+   ```log
+   ENGINE Shutting down due to error in start listener:
+   Traceback (most recent call last):
+     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 268, in start
+       self.publish('start')
+     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 248, in publish
+       raise exc
+   cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')
+   ```
+
+   you can use a different port if needed via the command line option `--port <custom_port>`. E.g.
+
+   ```bash
+   python train_reservation/main.py --port 9090
+   ```
+   </details>
+
+2. Create a new file [request-trains.py](request-trains.py).
+
+3. Add code to request all trains (http://127.0.0.1:8080/train-data/trains) and print them in the following format:
+   
+   ```plain
+   🚆 local_1000
+   🚆 express_2000
+   ```
+
+
+### 4. Print Available Seats in Train
+
+Content:
+
+- complex dictionaries
+- filter (optional)
+
+1. Create a new file [request-available-seats.py].
+
+2. Take a train's name as an argument (e.g. `python request-available-seats.py "local_1000"`).
+   
+   Make sure the train name is valid. 
+
+3. 
 
 
 # Ideas and Notes
@@ -199,7 +270,7 @@ curl http://127.0.0.1:8080/train-data/reset/express_2000 \
 - Possible excersies
   - print a list of the train IDs of all available trains
   - print a list which for each train lists all reserved seats
-  - print a list which for each train lists the persentage of reserved seats per coach, and for the whole train
+  - print a list which for each train lists the percentage of reserved seats per coach, and for the whole train
   - create a script that books a specific seat on a specific train
   - create a script that books a specified number of seats in a specified train
   - Add some [business rules](https://github.com/emilybache/KataTrainReservation#business-rules-around-reservations):

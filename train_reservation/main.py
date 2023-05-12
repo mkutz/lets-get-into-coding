@@ -11,8 +11,8 @@ from train_data_service import TrainDataService
 @click.option("--port", default=8080, help="port")
 def main(port):
     script_dir = pathlib.Path(__file__).parent.resolve()
-    with open(f"{script_dir}/trains.json") as f:
-        train_data = f.read()
+    with open(f"{script_dir}/trains.json") as file:
+        train_data = file.read()
 
     cherrypy.config.update(
         {"server.socket_port": port, "server.socket_host": "0.0.0.0"}
