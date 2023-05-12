@@ -53,6 +53,8 @@ USB Stick Content
 
 ## Setup
 
+### Tools
+
 We will use Python as the programming language and CS Code as the IDE/Editor in this course.
 
 Both are quite popular tools, used by many developers.
@@ -63,40 +65,63 @@ Having them setup will help you go further in getting into coding.
 3. Setup VS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 
-## Install Dependencies
+### Dependencies
 
 1. Create a virtual environment in this project directory:
 
-```shell script
-python3 -m venv venv --upgrade-deps
-```
+   ```bash
+   python3 -m venv venv --upgrade-deps
+   ```
 
 2. Activate the virtual environment:
 
-```shell script
-source venv/bin/activate
-```
+   ```bash
+   source venv/bin/activate
+   ```
 
 3. Install required packages:
 
-```shell script
-pip install -r requirements.txt
-```
-
-## Train Reservation Service
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 
-### Start the Services
+### Start the Train Reservation Service
 
-```bash
-python train_reservation/main.py
-```
+1. Start the train reservation service by running
+  
+   ```bash
+   python train_reservation/main.py
+   ```
 
-This will start a simple train reservation service with in-memory data, using port 8080.
-You can use a different port if needed via the command line option `--port <custom_port>`
+   This will start a simple train reservation service with in-memory data, using port 8080.
+
+   <details>
+   <summary>
+     If you get the error <code>cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')</code>
+   </summary>
+
+   ```log
+   ENGINE Shutting down due to error in start listener:
+   Traceback (most recent call last):
+     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 268, in start
+       self.publish('start')
+     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 248, in publish
+       raise exc
+   cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')
+   ```
+
+   you can use a different port if needed via the command line option `--port <custom_port>`. E.g.
+
+   ```bash
+   python train_reservation/main.py --port 9090
+   ```
+   </details>
+
+   You can stop the service by pressing <kbd>^</kbd> + <kbd>C</kbd> on MacOS or <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 
-### Using the Service
+#### Using the Service
 
 List all available trains:
 
