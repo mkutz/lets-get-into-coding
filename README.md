@@ -1,32 +1,5 @@
 # Let's get Into Coding
 
-Ideas: https://automatetheboringstuff.com/
-
-
-- [ ] Setup: IDE, Tools
-  - [ ] [PyCharm](https://www.jetbrains.com/pycharm/)
-  - [ ] [Mu](https://codewith.mu/en/download)
-  - [ ] [VS Code](https://code.visualstudio.com/)
-  - [X] ~~Git?~~ takes too much time
-  - [ ] Fallback: https://www.online-python.com/, GitPod
-- [ ] Content
-  - [ ] Experience the power of coding and how it can help you with your daily work.
-  - [ ] Learn the basics of a scripting language (_Python_) to get your coding journey started.
-  - [ ] Create your very first self-built tool custom-fit to your recurring tasks.
-  - [ ] Join a community of fellow learners to keep you going.
-- [ ] Objectives
-  1. Setup environment (IDE, Python 3, Shell (?))\
-     Have a fallback!
-  2. GET request (e.g. https://restful-booker.herokuapp.com/apidoc/index.html#api-Ping-Ping) (watch/do Stefan & Micha)
-  3. Parse info from response/local file (JSON, XML) (all, do yourself)
-  4. Create a JSON file
-  5. POST request (e.g. https://restful-booker.herokuapp.com/apidoc/index.html#api-Booking-CreateBooking)
-- [ ] Presentation
-  - Setup
-  - Objectives (incl. "Cheat Sheets")
-  - Further reading, Slack channel, etc.
-
-
 USB Stick Content
 - Python Installer: <https://www.python.org/downloads/>
 - VS Code Installer: <https://code.visualstudio.com/download>
@@ -34,6 +7,7 @@ USB Stick Content
 - Python Extension: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>
 - Assets for exercises
 - Train Reservation Backend: <https://github.com/rewe-digital-incubator/kata-train-reservation>
+
 
 ## Agenda
 
@@ -251,13 +225,62 @@ Content:
 - complex dictionaries
 - filter (optional)
 
-1. Create a new file [request-available-seats.py].
+1. Create a new file [request-available-seats.py](request-available-seats.py).
 
 2. Take a train's name as an argument (e.g. `python request-available-seats.py "local_1000"`).
    
-   Make sure the train name is valid. 
+   Make sure the train name is valid. Print an error message if it is not.
 
-3. 
+   E.g. `python request-available-seats.py "unknown_3000"` should return something like
+
+   ```
+   Train unknown_3000 is unknown!
+   ```
+
+3. Now filter get the details of the requested train (http://127.0.0.1:8080/train-data/trains/<requested-train>), extract the seats.
+
+4. Print all seat numbers which are still available (have a non-empty `booking_reference`).
+
+
+### Reserve a Seat
+
+Content:
+
+- post data
+
+1. Create a new file [request-reservation.py](request-reservation.py)
+   
+2. Add a parameter for the seat you want to reserve.
+
+   E.g. to reserve seat "6B" on train "local_1000", we want to use `python request-reservation.py local_1000 6B`
+
+3. Again, check the inputs to be valid and print error messages if they aren't.
+
+4. Reserve the requested seat by
+   
+   1. getting a booking reference (http://127.0.0.1:8080/booking_reference), and
+   
+   2. posting the booking reference (http://127.0.0.1:8080/train-data/reserve) in a JSON object like
+
+      ```json
+      {
+         "train_id": "<requested_train>",
+         "seats": ["<requested_seat>"],
+         "booking_reference": "<booking_reference>"
+      }
+      ```
+
+      E.g.
+
+      ```json
+      {
+         "train_id": "local_1000",
+         "seats": ["6B"],
+         "booking_reference": "01234567"
+      }
+      ```
+
+5. If successful, print the booking reference; otherwise print an error message.
 
 
 # Ideas and Notes
@@ -277,3 +300,8 @@ Content:
     - All seats must be in the same coach
     - At most 70 % of the seats of a given train may be reserved
     - If possible, only 70 % of the seats of a coach should be reserved 
+
+
+## Further Ideas
+
+- https://automatetheboringstuff.com/
