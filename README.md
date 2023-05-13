@@ -34,7 +34,7 @@ We will use Python as the programming language and CS Code as the IDE/Editor in 
 Both are quite popular tools, used by many developers.
 Having them setup will help you go further in getting into coding.
 
-1. Login to Slack and join the channel `#`
+1. Login to [AgileTD Zone Slack](https://www.agiletd.zone/join-slack) and join the channel [`#lets-get-into-coding`](https://agiletdzone.slack.com/archives/C057371D6AK)
    
 2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
    
