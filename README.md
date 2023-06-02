@@ -1,11 +1,11 @@
 # Let's get Into Coding
 
 USB Stick Content
-- Python Installer: <https://www.python.org/downloads/>
+- [Python Installer](https://www.python.org/downloads/)
 - Zipped venv with all dependencies per OS
-   - see <https://realpython.com/python-virtual-environments-a-primer/#copy-or-link-your-executables>
-- VS Code Installer: <https://code.visualstudio.com/download>
-- Python Extension: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>
+   - see [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/#copy-or-link-your-executables)
+- [VS Code Installer](https://code.visualstudio.com/download)
+- [Python Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Assets for exercises](https://github.com/mkutz/lets-get-into-coding)
 
 
@@ -29,7 +29,7 @@ USB Stick Content
 
 ### Tools
 
-We will use Python as the programming language and CS Code as the IDE/Editor in this course.
+We will use Python as the programming language and VS Code as the IDE/Editor in this course.
 
 Both are quite popular tools, used by many developers.
 Having them setup will help you go further in getting into coding.
@@ -43,7 +43,7 @@ Having them setup will help you go further in getting into coding.
 
 ### Dependencies
 
-1. Create a virtual environment in this project directory:
+1. Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in this project directory:
 
    ```bash
    python3 -m venv venv --upgrade-deps
@@ -68,6 +68,21 @@ Having them setup will help you go further in getting into coding.
    ```
 
    Should return something like `Python 3.11.3`.
+
+
+### Train Reservation Service
+
+This course uses a simple Train Reservation Service for exercises.
+
+### Starting the Service
+
+In a terminal session in this project, activate the virtual environment and start the service:
+
+```bash
+source venv/bin/activate
+
+python train_reservation/main.py
+```
 
 
 #### Using the Service
@@ -155,7 +170,7 @@ Content:
    E.g. for `python hello-you.py "Agile Testing Days"` it should print
 
    ```plain
-   Hello AgileTD!
+   Hello Agile Testing Days!
    ```
 
 3. If no argument is given (`python hello-you.py`), print
