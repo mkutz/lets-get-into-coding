@@ -2,11 +2,11 @@
 
 USB Stick Content
 - Python Installer: <https://www.python.org/downloads/>
-- VS Code Installer: <https://code.visualstudio.com/download>
 - Zipped venv with all dependencies per OS
+   - see <https://realpython.com/python-virtual-environments-a-primer/#copy-or-link-your-executables>
+- VS Code Installer: <https://code.visualstudio.com/download>
 - Python Extension: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>
-- Assets for exercises
-- Train Reservation Backend: <https://github.com/rewe-digital-incubator/kata-train-reservation>
+- [Assets for exercises](https://github.com/mkutz/lets-get-into-coding)
 
 
 ## Agenda
