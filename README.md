@@ -302,6 +302,7 @@ Content:
     - If possible, only 70 % of the seats of a coach should be reserved 
 
 
-## Further Ideas
+## Resources
 
-- https://automatetheboringstuff.com/
+- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+- [Learn Python in Y minutes](https://learnxinyminutes.com/docs/python/)
