@@ -252,9 +252,9 @@ Content:
    Train unknown_3000 is unknown!
    ```
 
-3. Now filter get the details of the requested train (http://127.0.0.1:8080/train-data/trains/<requested-train>), extract the seats.
+3. Now get the details of the requested train (http://127.0.0.1:8080/train-data/trains/<requested-train>) and extract the seats.
 
-4. Print all seat numbers which are still available (have a non-empty `booking_reference`).
+4. Print all seat numbers which are still available (have a empty `booking_reference`).
 
 
 ### Reserve a Seat
