@@ -74,7 +74,7 @@ Having them setup will help you go further in getting into coding.
 
 This course uses a simple Train Reservation Service for exercises.
 
-### Starting the Service
+#### Starting the Service
 
 In a terminal session in this project, activate the virtual environment and start the service:
 
