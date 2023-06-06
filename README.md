@@ -6,6 +6,8 @@ USB Stick Content
    - see [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/#copy-or-link-your-executables)
 - [VS Code Installer](https://code.visualstudio.com/download)
 - [Python Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Python Documentation](https://docs.python.org/3/archives/python-3.11.3-docs-html.zip)
+- [Requests Documentation](https://requests.readthedocs.io/_/downloads/en/latest/htmlzip/)
 - [Assets for exercises](https://github.com/mkutz/lets-get-into-coding)
 
 
@@ -27,7 +29,7 @@ USB Stick Content
 
 ## Setup
 
-### Tools
+### 1. Install the Tools
 
 We will use Python as the programming language and VS Code as the IDE/Editor in this course.
 
@@ -41,7 +43,7 @@ Having them setup will help you go further in getting into coding.
 3. Setup VS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 
-### Dependencies
+### Initialize the Environment
 
 1. Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in this project directory:
 
@@ -70,60 +72,6 @@ Having them setup will help you go further in getting into coding.
    Should return something like `Python 3.11.3`.
 
 
-### Train Reservation Service
-
-This course uses a simple Train Reservation Service for exercises.
-
-#### Starting the Service
-
-In a terminal session in this project, activate the virtual environment and start the service:
-
-```bash
-source venv/bin/activate
-
-python train_reservation/main.py
-```
-
-
-#### Using the Service
-
-List all available trains:
-
-```bash
-curl http://127.0.0.1:8080/train-data/trains
-```
-
-Check for free seats on the train "express_2000":
-
-```bash
-curl http://127.0.0.1:8080/train-data/trains/express_2000
-```
-
-Get a booking reference:
-
-```bash
-curl http://127.0.0.1:8080/booking_reference
-```
-
-Book a seat:
-
-```bash
-curl http://127.0.0.1:8080/train-data/reserve \
-  --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"train_id": "express_2000", "seats": ["1A"], "booking_reference": "01234567"}'
-```
-
-Remove all seat reservations for train "express_2000":
-
-```bash
-curl http://127.0.0.1:8080/train-data/reset/express_2000 \
-  --request POST
-```
-
-You can stop the service by pressing <kbd>^</kbd> + <kbd>C</kbd> on MacOS or <kbd>Ctrl</kbd> + <kbd>C</kbd>.
-
-
 ## Objectives
 
 ### 1. Check Your Setup
@@ -132,7 +80,7 @@ You can stop the service by pressing <kbd>^</kbd> + <kbd>C</kbd> on MacOS or <kb
    Feel free to ask any questions you might have!
 
 2. Open a termin in VS code (Menu: Terminal → New Terminal).\
-   It should at the lower end of the VS code window.
+   It should appear at the lower end of the VS code window.
 
 3. Enter the following in the terminal:
 
@@ -190,8 +138,9 @@ Content:
 
 Content:
 
-- requests, json
-- for in
+- [making requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
+  with [json response content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
+- [`for` statement](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
 
 1. Start the train reservation service by running
   
@@ -201,31 +150,11 @@ Content:
 
    This will start a simple train reservation service with in-memory data, using port 8080.
 
-   <details>
-   <summary>
-     If you get the error <code>cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')</code>
-   </summary>
-
-   ```log
-   ENGINE Shutting down due to error in start listener:
-   Traceback (most recent call last):
-     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 268, in start
-       self.publish('start')
-     File "/Users/Michael.Kutz/Projects/lets-get-into-coding/venv/lib/python3.11/site-packages/cherrypy/process/wspbus.py", line 248, in publish
-       raise exc
-   cherrypy.process.wspbus.ChannelFailures: Timeout('Port 8080 not free on 0.0.0.0.')
-   ```
-
-   you can use a different port if needed via the command line option `--port <custom_port>`. E.g.
-
-   ```bash
-   python train_reservation/main.py --port 9090
-   ```
-   </details>
+   See [the service's README.md](train_reservation/README.md) if you run in any problems.
 
 2. Create a new file [request-trains.py](request-trains.py).
 
-3. Add code to request all trains (http://127.0.0.1:8080/train-data/trains) and print them in the following format:
+3. Add code to [list all available trains](train_reservation/README.md#list-all-available-trains) and print them in the following format:
    
    ```plain
    🚆 local_1000
@@ -237,24 +166,46 @@ Content:
 
 Content:
 
-- complex dictionaries
-- filter (optional)
+- [dictionaries](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)
+- [`filter` function](https://docs.python.org/3/library/functions.html#filter) (optional)
 
 1. Create a new file [request-available-seats.py](request-available-seats.py).
 
 2. Take a train's name as an argument (e.g. `python request-available-seats.py "local_1000"`).
    
-   Make sure the train name is valid. Print an error message if it is not.
+   Make sure the train name is valid.
+   Print an error message if it is not.
 
    E.g. `python request-available-seats.py "unknown_3000"` should return something like
 
-   ```
-   Train unknown_3000 is unknown!
+   ```plain
+   🚆 unknown_3000 is unknown!
    ```
 
-3. Now get the details of the requested train (http://127.0.0.1:8080/train-data/trains/<requested-train>) and extract the seats.
+3. Now [get the details of the requested train](train_reservation/README.md#get-train-details) and extract the seats.
 
 4. Print all seat numbers which are still available (have a empty `booking_reference`).
+   
+   E.g. `python request-available-seats.py "express_2000"` should return something like
+
+   ```plain
+   💺 1A 🔴
+   💺 2A 🟢
+   💺 3A 🟢
+   💺 4A 🟢
+   💺 5A 🟢
+   💺 6A 🟢
+   💺 7A 🟢
+   💺 8A 🟢
+   💺 1B 🟢
+   💺 2B 🔴
+   💺 3B 🟢
+   💺 4B 🟢
+   💺 5B 🟢
+   💺 6B 🟢
+   💺 7B 🟢
+   💺 8B 🟢
+   ```
 
 
 ### Reserve a Seat
@@ -262,8 +213,9 @@ Content:
 Content:
 
 - post data
+- [setting request headers](https://requests.readthedocs.io/en/latest/user/quickstart/#custom-headers)
 
-1. Create a new file [request-reservation.py](request-reservation.py)
+1. Create a new file [request-reservation.py](request-reservation.py).
    
 2. Add a parameter for the seat you want to reserve.
 
@@ -273,9 +225,9 @@ Content:
 
 4. Reserve the requested seat by
    
-   1. getting a booking reference (http://127.0.0.1:8080/booking_reference), and
+   1. [getting a booking reference](train_reservation/README.md#get-a-booking-reference), and
    
-   2. posting the booking reference (http://127.0.0.1:8080/train-data/reserve) in a JSON object like
+   2. [posting the booking reference](train_reservation/README.md#book-a-seat) in a JSON object like
 
       ```json
       {
@@ -296,6 +248,12 @@ Content:
       ```
 
 5. If successful, print the booking reference; otherwise print an error message.
+
+   E.g. print
+
+   ```plain
+   🚆 local_1000 💺 2C 🎫 1234567a1
+   ```
 
 
 # Ideas and Notes

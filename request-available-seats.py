@@ -17,7 +17,7 @@ seats = train_response.json()["seats"]
 for number, seat in seats.items():
     sys.stdout.write("💺 %s " % number)
     if seat["booking_reference"] == "":
-        sys.stdout.write("🆓")
+        sys.stdout.write("🟢")
     else:
-        sys.stdout.write("")
+        sys.stdout.write("🔴")
     sys.stdout.write("\n")
