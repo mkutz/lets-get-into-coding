@@ -101,11 +101,15 @@ Having them setup will help you go further in getting into coding.
 
 Content:
 
-- sys.argv
-- arrays, len
-- if/else
-- print
-- string interpolation/formatted strings
+- [argument passing](https://docs.python.org/3/tutorial/interpreter.html#argument-passing),
+  [sys.argv](https://docs.python.org/3/library/sys.html#sys.argv)
+- [lists](https://docs.python.org/3/tutorial/introduction.html#lists),
+  [sequence types](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range),
+  [len](https://docs.python.org/3/library/functions.html#len)
+- [`if`/`else` statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements)
+- [`print`](https://docs.python.org/3/library/functions.html#print)
+- [strings](https://docs.python.org/3/tutorial/introduction.html#strings),
+  [Formatted string literals](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
 
 1. Copy [hello-wold.py](hello-world.py) to a new file [hello-you.py](hello-you.py)
    
@@ -140,7 +144,8 @@ Content:
 
 - [making requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
   with [json response content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
-- [`for` statement](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
+- [`for` statements](https://docs.python.org/3/tutorial/controlflow.html#for-statements)
+  [`for` statement reference](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
 
 1. Start the train reservation service by running
   

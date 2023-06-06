@@ -33,3 +33,7 @@ for number, seat in seats.items():
         reservation_response.raise_for_status()
         
         print("🚆 %s 💺 %s 🎫 %s" % (requested_train_id, requested_seat_number, booking_reference))
+        sys.exit(0)
+
+sys.stderr.write("🚆 %s 💺 %s is invalid!\n" % (requested_train_id, requested_seat_number))
+sys.exit(4)
