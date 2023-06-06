@@ -25,10 +25,9 @@ for number, seat in seats.items():
         booking_reference_response = requests.get("http://127.0.0.1:8080/booking-reference/")
         booking_reference = booking_reference_response.text
 
-        json = '{"train_id": "%s", "seats": ["%s"], "booking_reference": "%s"}' % (requested_train_id, requested_seat_number, booking_reference)
-        print(json)
         reservation_response = requests.post("http://127.0.0.1:8080/train-data/reserve",
-                      data=json, headers={"content-type": "application/json"})
+                      json={"train_id": requested_train_id, "seats": [requested_seat_number], "booking_reference": booking_reference},
+                      headers={"content-type": "application/json"})
         
         reservation_response.raise_for_status()
         
