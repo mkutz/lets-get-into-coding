@@ -217,7 +217,7 @@ Content:
 
 Content:
 
-- post data
+- [making post requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
 - [setting request headers](https://requests.readthedocs.io/en/latest/user/quickstart/#custom-headers)
 
 1. Create a new file [request-reservation.py](request-reservation.py).
@@ -284,3 +284,7 @@ Content:
 
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 - [Learn Python in Y minutes](https://learnxinyminutes.com/docs/python/)
+- [Requests library docs](https://requests.readthedocs.io/en/latest/user/quickstart/)
+- [Python docs](https://docs.python.org/), especially
+  - [The Python Tutorial](https://docs.python.org/tutorial/)
+  - [The Python Standard Library](https://docs.python.org/library/)
