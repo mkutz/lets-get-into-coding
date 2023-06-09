@@ -266,6 +266,8 @@ Content:
 ## Train Reservation Service
 
 - Create a script that creates some random bookings
+- Use functions to structure your scripts (e.g. `verify_train_id(train_id)`, `book_seat(train_id, seat_number)`)
+- Create a reservation script that asks for train_id and seat_number, instead of using call parameters
 - Add support for POST /train-data/reset to reset all train data
 - Use train_data_service.py for code reading?
 - Possible excersies
