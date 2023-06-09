@@ -14,3 +14,8 @@ venv/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
+.DS_Store
+
+tools/python
+tools/vs-code

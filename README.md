@@ -1,30 +1,16 @@
 # Let's get Into Coding
 
-USB Stick Content
-- [Python Installer](https://www.python.org/downloads/)
-- Zipped venv with all dependencies per OS
-   - see [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/#copy-or-link-your-executables)
-- [VS Code Installer](https://code.visualstudio.com/download)
-- [Python Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Python Documentation](https://docs.python.org/3/archives/python-3.11.3-docs-html.zip)
-- [Requests Documentation](https://requests.readthedocs.io/_/downloads/en/latest/htmlzip/)
-- [Assets for exercises](https://github.com/mkutz/lets-get-into-coding)
-
-
 ## Agenda
 
-10:45 – 12:30
-
-| Time  | What                                                                                                                |
-| ----- | ------------------------------------------------------------------------------------------------------------------- |
-| 10:45 | Welcome, introduction, setup instructions (slides), pairup people without computer, get everyone into Slack channel |
-| 11:00 | Hands-on setup together: IDE, Python, Shell                                                                         |
-| 11:15 | First task: GET https://restful-booker.herokuapp.com/apidoc/index.html#api-Ping-Ping                                |
-| 11:35 | Present instructions for second task along with needed docs: Parse info from response/local file (JSON, XML)        |
-| 11:45 | Short break for those who need one (?)                                                                              |
-| 12:00 | Present solution for second task                                                                                    |
-| 12:10 | Present instructions for further tasks, let everybody work on them                                                  |
-| 12:25 | Debrief, collect feedback, encourage to go on and find help on Slack                                                |
+| Time  | What                                                                                                                          |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 10:45 | Welcome, introduction, pair/team up                                                                                           |
+| 10:50 | Together: [setup](#setup): [install tools](#1-install-the-tools), [initialize the environment](#2-initialize-the-environment) |
+| 11:10 | Together: [check setup](#1-check-your-setup) + [add parameters](#2-add-parameters)                                            |
+| 11:20 | In pairs/teams: [return all trains](#3-return-all-trains) + [print available seats](#4-print-available-seats-in-train)        |
+| 11:55 | Short check point                                                                                                             |
+| 12:00 | In pairs/teams: [reserve a seat](#5-reserve-a-seat) + [further ideas](#further-ideas) or own ideas                            |
+| 12:25 | Debrief, collect feedback, encourage to go on and find help on Slack                                                          |
 
 
 ## Setup
@@ -43,7 +29,7 @@ Having them setup will help you go further in getting into coding.
 3. Setup VS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 
-### Initialize the Environment
+### 2. Initialize the Environment
 
 1. Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in this project directory:
 
@@ -76,7 +62,12 @@ Having them setup will help you go further in getting into coding.
 
 ### 1. Check Your Setup
 
-1. Open [hello-wold.py](hello-world.py) in VS Code and understand its content.\
+Content:
+
+- [`print`](docs/python-3.11.4-docs-html/library/functions.html#print)
+
+
+1. Open [1-hello-wold.py](1-hello-world.py) in VS Code and understand its content.\
    Feel free to ask any questions you might have!
 
 2. Open a termin in VS code (Menu: Terminal → New Terminal).\
@@ -101,37 +92,33 @@ Having them setup will help you go further in getting into coding.
 
 Content:
 
-- [argument passing](https://docs.python.org/3/tutorial/interpreter.html#argument-passing),
-  [sys.argv](https://docs.python.org/3/library/sys.html#sys.argv)
-- [lists](https://docs.python.org/3/tutorial/introduction.html#lists),
-  [sequence types](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range),
-  [len](https://docs.python.org/3/library/functions.html#len)
-- [`if`/`else` statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements)
-- [`print`](https://docs.python.org/3/library/functions.html#print)
-- [strings](https://docs.python.org/3/tutorial/introduction.html#strings),
-  [Formatted string literals](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
+- [argument passing](docs/python-3.11.4-docs-html/tutorial/interpreter.html#argument-passing),
+  [sys.argv](docs/python-3.11.4-docs-html/library/sys.html#sys.argv)
+- [`print`](docs/python-3.11.4-docs-html/library/functions.html#print)
+- [strings](docs/python-3.11.4-docs-html/tutorial/introduction.html#strings),
+  optinally [formatted string literals](docs/python-3.11.4-docs-html/reference/lexical_analysis.html#f-strings)
+- [lists](docs/python-3.11.4-docs-html/tutorial/introduction.html#lists),
+  [sequence types](docs/python-3.11.4-docs-html/library/stdtypes.html#sequence-types-list-tuple-range),
+  [len](docs/python-3.11.4-docs-html/library/functions.html#len)
+- [`if`/`else` statements](docs/python-3.11.4-docs-html/tutorial/controlflow.html#if-statements)
 
-1. Copy [hello-wold.py](hello-world.py) to a new file [hello-you.py](hello-you.py)
-   
-   ```bash
-   cp hello-world.py hello-you.py
-   ```
+1. Open [2-hello-you.py](2-hello-you.py)
 
 2. Change the code to take an argument, which is printed instead of "World".
 
-   E.g. for `python hello-you.py "Agile Testing Days"` it should print
+   E.g. for `python 2-hello-you.py "AgileTD"` it should print
 
    ```plain
-   Hello Agile Testing Days!
+   Hello AgileTD!
    ```
 
-3. If no argument is given (`python hello-you.py`), print
+3. If no argument is given (`python 2-hello-you.py`), print
 
    ```plain
    Hello you!
    ```
 
-4. If more then one argument is given (e.g. `python hello-you.py Stefan Micha`), print
+4. If more then one argument is given (e.g. `python 2-hello-you.py Stefan Micha`), print
    
    ```plain
    Hello Stefan and Micha!
@@ -142,10 +129,10 @@ Content:
 
 Content:
 
-- [making requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
-  with [json response content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
-- [`for` statements](https://docs.python.org/3/tutorial/controlflow.html#for-statements)
-  [`for` statement reference](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement)
+- [making requests](docs/requests-latest/index.html#make-a-request)
+  with [json response content](docs/requests-latest/index.html#json-response-content)
+- [`for` statements](docs/python-3.11.4-docs-html/tutorial/controlflow.html#for-statements)
+  [`for` statement reference](docs/python-3.11.4-docs-html/reference/compound_stmts.html#the-for-statement)
 
 1. Start the train reservation service by running
   
@@ -157,7 +144,7 @@ Content:
 
    See [the service's README.md](train_reservation/README.md) if you run in any problems.
 
-2. Create a new file [request-trains.py](request-trains.py).
+2. Open [3-request-trains.py](3-request-trains.py).
 
 3. Add code to [list all available trains](train_reservation/README.md#list-all-available-trains) and print them in the following format:
    
@@ -171,17 +158,17 @@ Content:
 
 Content:
 
-- [dictionaries](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)
-- [`filter` function](https://docs.python.org/3/library/functions.html#filter) (optional)
+- [dictionaries](docs/python-3.11.4-docs-html/library/stdtypes.html#mapping-types-dict)
+- [`filter` function](docs/python-3.11.4-docs-html/library/functions.html#filter) (optional)
 
-1. Create a new file [request-available-seats.py](request-available-seats.py).
+1. Open [4-request-available-seats.py](4-request-available-seats.py).
 
-2. Take a train's name as an argument (e.g. `python request-available-seats.py "local_1000"`).
+2. Take a train's name as an argument (e.g. `python 4-request-available-seats.py "local_1000"`).
    
    Make sure the train name is valid.
    Print an error message if it is not.
 
-   E.g. `python request-available-seats.py "unknown_3000"` should return something like
+   E.g. `python 4-request-available-seats.py "unknown_3000"` should return something like
 
    ```plain
    🚆 unknown_3000 is unknown!
@@ -191,7 +178,7 @@ Content:
 
 4. Print all seat numbers which are still available (have a empty `booking_reference`).
    
-   E.g. `python request-available-seats.py "express_2000"` should return something like
+   E.g. `python 4-request-available-seats.py "express_2000"` should return something like
 
    ```plain
    💺 1A 🔴
@@ -213,18 +200,18 @@ Content:
    ```
 
 
-### Reserve a Seat
+### 5. Reserve a Seat
 
 Content:
 
-- [making post requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
-- [setting request headers](https://requests.readthedocs.io/en/latest/user/quickstart/#custom-headers)
+- [making post requests](docs/requests-latest/index.html#make-a-request)
+- [setting request headers](docs/requests-latest/index.html#custom-headers)
 
-1. Create a new file [request-reservation.py](request-reservation.py).
+1. Open [5-request-reservation.py](5-request-reservation.py).
    
 2. Add a parameter for the seat you want to reserve.
 
-   E.g. to reserve seat "6B" on train "local_1000", we want to use `python request-reservation.py local_1000 6B`
+   E.g. to reserve seat "6B" on train "local_1000", we want to use `python 5-request-reservation.py local_1000 6B`
 
 3. Again, check the inputs to be valid and print error messages if they aren't.
 
@@ -261,25 +248,15 @@ Content:
    ```
 
 
-# Ideas and Notes
-
-## Train Reservation Service
+### Further Ideas
 
 - Create a script that creates some random bookings
 - Use functions to structure your scripts (e.g. `verify_train_id(train_id)`, `book_seat(train_id, seat_number)`)
 - Create a reservation script that asks for train_id and seat_number, instead of using call parameters
 - Add support for POST /train-data/reset to reset all train data
-- Use train_data_service.py for code reading?
-- Possible excersies
-  - print a list of the train IDs of all available trains
-  - print a list which for each train lists all reserved seats
-  - print a list which for each train lists the percentage of reserved seats per coach, and for the whole train
-  - create a script that books a specific seat on a specific train
-  - create a script that books a specified number of seats in a specified train
-  - Add some [business rules](https://github.com/emilybache/KataTrainReservation#business-rules-around-reservations):
-    - All seats must be in the same coach
-    - At most 70 % of the seats of a given train may be reserved
-    - If possible, only 70 % of the seats of a coach should be reserved 
+- Use train_data_service.py for code reading
+- Print a list which for each train lists the percentage of reserved seats per coach, and for the whole train
+- Create a script that books a specified number of seats in a specified train
 
 
 ## Resources
