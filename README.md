@@ -31,7 +31,7 @@ Having them setup will help you go further in getting into coding.
 
 ### 2. Initialize the Environment
 
-1. Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in this project directory:
+1. Clone this repo and create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in the cloned directory:
 
    ```bash
    python3 -m venv venv --upgrade-deps
@@ -76,7 +76,7 @@ Content:
 3. Enter the following in the terminal:
 
    ```bash
-   python hello-world.py
+   python 1-hello-world.py
    ```
   
    The output should be
@@ -102,7 +102,7 @@ Content:
   [len](docs/python-3.11.4-docs-html/library/functions.html#len)
 - [`if`/`else` statements](docs/python-3.11.4-docs-html/tutorial/controlflow.html#if-statements)
 
-1. Open [2-hello-you.py](2-hello-you.py)
+1. Open [2-hello-you.py](2-hello-you.py).
 
 2. Change the code to take an argument, which is printed instead of "World".
 
@@ -253,10 +253,10 @@ Content:
 - Create a script that creates some random bookings
 - Use functions to structure your scripts (e.g. `verify_train_id(train_id)`, `book_seat(train_id, seat_number)`)
 - Create a reservation script that asks for train_id and seat_number, instead of using call parameters
-- Add support for POST /train-data/reset to reset all train data
-- Use train_data_service.py for code reading
 - Print a list which for each train lists the percentage of reserved seats per coach, and for the whole train
 - Create a script that books a specified number of seats in a specified train
+- Use [train_data_service](train_reservation/train_data_service.py) for code reading
+- Add support for POST /train-data/reset to [train_data_service](train_reservation/train_data_service.py), resetting all train data
 
 
 ## Resources

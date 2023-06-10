@@ -7,7 +7,7 @@ For Windows, please choose according to your system's architecture:
 - [Windows installer (32-bit)](python/python-3.11.4.exe),
 - [Windows installer (ARM64)](python/python-3.11.4-arm64.exe)
 
-For macOS, please use the [macOS 64-bit universal2 installer](python/python-3.11.4-macos11.pkg), or use [Homebrew](https://docs.brew.sh/Homebrew-and-Python)
+For macOS, please use the [macOS 64-bit universal2 installer](python/python-3.11.4-macos11.pkg), or use [Homebrew](https://docs.brew.sh/Homebrew-and-Python).
 
 For Linux, please use the [Gzipped source tarball](python/Python-3.11.4.tgz), or use your system's package manager.
 
