@@ -31,25 +31,33 @@ Having them setup will help you go further in getting into coding.
 
 ### 2. Initialize the Environment
 
-1. Clone this repo and create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in the cloned directory:
+1. Clone this repo:
+
+   ```bash
+   cd <wherever-you-want-your-project>
+   git clone https://github.com/mkutz/lets-get-into-coding.git
+   cd lets-get-into-coding/
+   ```
+
+2. Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in the cloned directory:
 
    ```bash
    python3 -m venv venv --upgrade-deps
    ```
 
-2. Activate the virtual environment:
+3. Activate the virtual environment:
 
    ```bash
    source venv/bin/activate
    ```
 
-3. Install required packages:
+4. Install required packages:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. You should now be able to run `python` (without `3`):
+5. You should now be able to run `python` (without `3`):
    
    ```bash
    python --version
