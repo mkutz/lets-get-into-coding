@@ -61,7 +61,7 @@ Having them setup will help you go further in getting into coding.
    python --version
    ```
 
-   Should return something like `Python 3.11.3`.
+   Should return something like `Python 3.11.4`.
 
 
 ## Objectives
