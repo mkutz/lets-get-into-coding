@@ -4,7 +4,8 @@
 venv/
 
 # VS Code
-.vscode/
+/.vscode/*
+!.vscode/launch.json
 
 ### IntelliJ IDEA ###
 .idea
@@ -16,6 +17,3 @@ out/
 !**/src/test/**/out/
 
 .DS_Store
-
-tools/python
-tools/vs-code
