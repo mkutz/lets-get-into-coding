@@ -72,7 +72,7 @@ Having them setup will help you go further in getting into coding.
 
 Content:
 
-- [`print`](docs/python-3.11.4-docs-html/library/functions.html#print)
+- [`print`](https://docs.python.org/library/functions.html#print)
 
 
 1. Open [1-hello-wold.py](1-hello-world.py) in VS Code and understand its content.\
@@ -100,15 +100,15 @@ Content:
 
 Content:
 
-- [argument passing](docs/python-3.11.4-docs-html/tutorial/interpreter.html#argument-passing),
-  [sys.argv](docs/python-3.11.4-docs-html/library/sys.html#sys.argv)
-- [`print`](docs/python-3.11.4-docs-html/library/functions.html#print)
-- [strings](docs/python-3.11.4-docs-html/tutorial/introduction.html#strings),
-  optinally [formatted string literals](docs/python-3.11.4-docs-html/reference/lexical_analysis.html#f-strings)
-- [lists](docs/python-3.11.4-docs-html/tutorial/introduction.html#lists),
-  [sequence types](docs/python-3.11.4-docs-html/library/stdtypes.html#sequence-types-list-tuple-range),
-  [len](docs/python-3.11.4-docs-html/library/functions.html#len)
-- [`if`/`else` statements](docs/python-3.11.4-docs-html/tutorial/controlflow.html#if-statements)
+- [argument passing](https://docs.python.org/tutorial/interpreter.html#argument-passing),
+  [sys.argv](https://docs.python.org/library/sys.html#sys.argv)
+- [`print`](https://docs.python.org/library/functions.html#print)
+- [strings](https://docs.python.org/tutorial/introduction.html#strings),
+  optinally [formatted string literals](https://docs.python.org/reference/lexical_analysis.html#f-strings)
+- [lists](https://docs.python.org/tutorial/introduction.html#lists),
+  [sequence types](https://docs.python.org/library/stdtypes.html#sequence-types-list-tuple-range),
+  [len](https://docs.python.org/library/functions.html#len)
+- [`if`/`else` statements](https://docs.python.org/tutorial/controlflow.html#if-statements)
 
 1. Open [2-hello-you.py](2-hello-you.py).
 
@@ -137,10 +137,10 @@ Content:
 
 Content:
 
-- [making requests](docs/requests-latest/index.html#make-a-request)
-  with [json response content](docs/requests-latest/index.html#json-response-content)
-- [`for` statements](docs/python-3.11.4-docs-html/tutorial/controlflow.html#for-statements)
-  [`for` statement reference](docs/python-3.11.4-docs-html/reference/compound_stmts.html#the-for-statement)
+- [making requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
+  with [json response content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
+- [`for` statements](https://docs.python.org/tutorial/controlflow.html#for-statements)
+  [`for` statement reference](https://docs.python.org/reference/compound_stmts.html#the-for-statement)
 
 1. Start the train reservation service by running
   
@@ -166,8 +166,8 @@ Content:
 
 Content:
 
-- [dictionaries](docs/python-3.11.4-docs-html/library/stdtypes.html#mapping-types-dict)
-- [`filter` function](docs/python-3.11.4-docs-html/library/functions.html#filter) (optional)
+- [dictionaries](https://docs.python.org/library/stdtypes.html#mapping-types-dict)
+- [`filter` function](https://docs.python.org/library/functions.html#filter) (optional)
 
 1. Open [4-request-available-seats.py](4-request-available-seats.py).
 
@@ -212,8 +212,8 @@ Content:
 
 Content:
 
-- [making post requests](docs/requests-latest/index.html#make-a-request)
-- [setting request headers](docs/requests-latest/index.html#custom-headers)
+- [making post requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
+- [setting request headers](https://requests.readthedocs.io/en/latest/user/quickstart/#custom-headers)
 
 1. Open [5-request-reservation.py](5-request-reservation.py).
    
