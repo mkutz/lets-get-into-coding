@@ -49,8 +49,9 @@ You can stop the service by pressing <kbd>^</kbd> + <kbd>C</kbd> on MacOS or <kb
 
 ### List All Available Trains
 
-```bash
-curl http://127.0.0.1:8080/train-data/trains
+```python
+>>> import requests
+>>> requests.get("http://127.0.0.1:8080/train-data/trains").json()
 ```
 
 Will return a JSON list of all trains' IDs.
@@ -71,53 +72,56 @@ E.g.:
 
 ### Get Train Details
 
-```bash
-curl http://127.0.0.1:8080/train-data/trains/:train_id
+```python
+>>> import requests
+>>> requests.get(f"http://127.0.0.1:8080/train-data/trains/{train_id}").json()
 ```
 
 E.g. get the details on "express_2000":
 
-```bash
-curl http://127.0.0.1:8080/train-data/trains/express_2000
+```python
+>>> import requests
+>>> train_id = "express_2000"
+>>> requests.get(f"http://127.0.0.1:8080/train-data/trains/{train_id}").json()
 ```
 
 
 ### Get a Booking Reference
 
-```bash
-curl http://127.0.0.1:8080/booking-reference/
+```python
+>>> import requests
+>>> requests.get("http://127.0.0.1:8080/booking-reference/").text
 ```
 
 
 ### Book a Seat
 
-```bash
-curl http://127.0.0.1:8080/train-data/reserve \
-  --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"train_id": "<train_id>", "seats": <seat_numbers>, "booking_reference": "<booking_reference>"}'
+```python
+>>> import requests
+>>> payload = {"train_id": train_id, "seats": seat_numbers, "booking_reference": booking_reference}
+>>> requests.post("http://127.0.0.1:8080/train-data/reserve/", json = payload)
 ```
 
 E.g. to book seat "1A" and "2B" on train "express_2000" under reference "12345":
 
-```bash
-curl http://127.0.0.1:8080/train-data/reserve \
-  --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"train_id": "express_2000", "seats": ["1A", "2B"], "booking_reference": "12345"}'
+```python
+>>> import requests
+>>> payload = {"train_id": "express_2000", "seats": ["1A", "2B"], "booking_reference": "12345"}
+>>> requests.post("http://127.0.0.1:8080/train-data/reserve/", json = payload)
 ```
 
 
 ### Remove all Seat Reservations
 
-```bash
-curl http://127.0.0.1:8080/train-data/reset/:train_id \
-  --request POST
+```python
+>>> import requests
+>>> requests.post(f"http://127.0.0.1:8080/train-data/reset/{train_id}")
 ```
 
 E.g. remove all reservations on train "express_2000":
 
-```bash
-curl http://127.0.0.1:8080/train-data/reset/express_2000 \
-  --request POST
+```python
+>>> import requests
+>>> train_id = "express_2000"
+>>> requests.post(f"http://127.0.0.1:8080/train-data/reset/{train_id}")
 ```
