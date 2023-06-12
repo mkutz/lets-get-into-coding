@@ -24,9 +24,7 @@ Having them setup will help you go further in getting into coding.
 
 1. Login to [AgileTD Zone Slack](https://www.agiletd.zone/join-slack) and join the channel [`#lets-get-into-coding`](https://agiletdzone.slack.com/archives/C057371D6AK)
    
-2. Follow [instructions to setup Python](https://realpython.com/installing-python/)
-   
-3. Setup VS Code: [Linux](https://code.visualstudio.com/docs/setup/linux), [MacOS](https://code.visualstudio.com/docs/setup/mac), [Windows](https://code.visualstudio.com/docs/setup/windows)
+2. Install Python and Virtual Studio Code from [tools directory](tools/README.md) if necessary.
 
 
 ### 2. Initialize the Environment
@@ -261,6 +259,7 @@ Content:
 - Create a script that creates some random bookings
 - Use functions to structure your scripts (e.g. `verify_train_id(train_id)`, `book_seat(train_id, seat_number)`)
 - Create a reservation script that asks for train_id and seat_number, instead of using call parameters
+- Write some [unit tests](https://docs.python.org/3/library/unittest.html) for your scripts
 - Print a list which for each train lists the percentage of reserved seats per coach, and for the whole train
 - Create a script that books a specified number of seats in a specified train
 - Use [train_data_service](train_reservation/train_data_service.py) for code reading

@@ -1,40 +1,88 @@
 # Install Tools
 
-## Python
+## Windows
 
-For Windows, please choose according to your system's architecture:
-- [Windows installer (64-bit)](python/python-3.11.4-amd64.exe),
-- [Windows installer (32-bit)](python/python-3.11.4.exe),
-- [Windows installer (ARM64)](python/python-3.11.4-arm64.exe)
+### Python
 
-For macOS, please use the [macOS 64-bit universal2 installer](python/python-3.11.4-macos11.pkg), or use [Homebrew](https://docs.brew.sh/Homebrew-and-Python).
+Check if you got Python, yet:
 
-For Linux, please use the [Gzipped source tarball](python/Python-3.11.4.tgz), or use your system's package manager.
+Open a PowerShell (press <kbd>⊞</kbd>, type `powershell`) and type
 
-… or find the latest versions at [Python downloads page](https://www.python.org/downloads/).
+```powershell
+python --version
+```
+
+As long as the version is 3.7 or newer, you should be fine for this workshop and you can continue to [the next chapter](#visual-studio-vs-code).
+
+Otherwise, please copy the zipped installers package for your system from the provided pendrive and follow its instructions.
 
 
-## Visual Studio (VS) Code
+### Visual Studio (VS) Code
 
-For Windows, please use the [User Setup Installer](vs-code/VSCodeUserSetup-ia32-1.79.0.exe).
+Check if you git Visual Studio (VS) Code installed aleady.
 
-For macOS, please use the [Univeral Installer](vs-code/VSCode-darwin-universal.zip).
+Otherwise, please copy the zipped installers package for your system from the provided pendrive and follow its instructions.
 
-For Linux please choose the [DEB](vs-code/code_1.79.0-1686149120_amd64.deb), or [RPM package](vs-code/code-1.79.0-1686149197.el7.x86_64.rpm).
 
-… or find the latest versions at [VS Code downloads page](https://code.visualstudio.com/download).
+## Mac OS
+
+### Python
+
+Open a terminal and type
+
+```bash
+python3 --version
+```
+
+The output should output something like
+
+```plain
+Python 3.11.4
+```
+
+As long as the version is 3.7 or newer, you should be fine for this workshop and you can continue to [the next chapter](#visual-studio-vs-code-1).
+
+Otherwise, please copy the zipped installers package for your system from the provided pendrive and follow its instructions.
+
+
+### Visual Studio (VS) Code
+
+Check if you git Visual Studio (VS) Code installed aleady.
+
+If you don't, find the installer on the provided pendrive.
+
+
+## Linux
+
+### Python
+
+Open a terminal and type
+
+```bash
+python3 --version
+```
+
+The output should output something like
+
+```plain
+Python 3.11.4
+```
+
+As long as the version is 3.7 or newer, you should be fine for this workshop and you can continue to [the next chapter](#visual-studio-vs-code-2).
+
+Otherwise, please copy the zipped installers package for your system from the provided pendrive and follow its instructions.
+
+
+### Visual Studio (VS) Code
+
+Check if you git Visual Studio (VS) Code installed aleady.
+
+Otherwise, please copy the zipped installers package for your system from the provided pendrive and follow its instructions.
 
 
 ## VS Code Python Extension
 
-1. Go to the extensions view in VS Code.
+1. Go to the extensions view in VS Code (<kbd>⇧</kbd> + <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>X</kbd>
+).
 2. Search for "python".
 3. Select the official Python extension by Microsoft.
-
-<details><summary>No internet at all 😔</summary>
-
-1. Press <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>
-2. Enter `vsix` and select "Install extension from VSIX.
-3. Select [vs-code/ms-python.python-2023.11.11581008.vsix](vs-code/ms-python.python-2023.11.11581008.vsix).
-
-</details>
