@@ -1,6 +1,7 @@
 # Train Reservation Service
 
 This service is a very simple version of an API-based trains seat reservation system.
+It is based on the [Train Reserviation Kata](https://github.com/emilybache/KataTrainReservation) by [Emily Bache](http://bacheconsulting.com/).
 It uses static data and will reset its state when shut down.
 
 
