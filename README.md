@@ -102,7 +102,7 @@ Content:
   [sys.argv](https://docs.python.org/library/sys.html#sys.argv)
 - [`print`](https://docs.python.org/library/functions.html#print)
 - [strings](https://docs.python.org/tutorial/introduction.html#strings),
-  optinally [formatted string literals](https://docs.python.org/reference/lexical_analysis.html#f-strings)
+  optionally [formatted string literals](https://docs.python.org/reference/lexical_analysis.html#f-strings)
 - [lists](https://docs.python.org/tutorial/introduction.html#lists),
   [sequence types](https://docs.python.org/library/stdtypes.html#sequence-types-list-tuple-range),
   [len](https://docs.python.org/library/functions.html#len)
@@ -115,19 +115,19 @@ Content:
    E.g. for `python 2-hello-you.py "AgileTD"` it should print
 
    ```plain
-   Hello AgileTD!
+   Hello, AgileTD!
    ```
 
 3. If no argument is given (`python 2-hello-you.py`), print
 
    ```plain
-   Hello you!
+   Hello, you!
    ```
 
 4. If more then one argument is given (e.g. `python 2-hello-you.py Stefan Micha`), print
    
    ```plain
-   Hello Stefan and Micha!
+   Hello, Stefan and Micha!
    ```
 
 
@@ -136,7 +136,7 @@ Content:
 Content:
 
 - [making requests](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
-  with [json response content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
+  with [JSON response content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
 - [`for` statements](https://docs.python.org/tutorial/controlflow.html#for-statements)
   [`for` statement reference](https://docs.python.org/reference/compound_stmts.html#the-for-statement)
 
