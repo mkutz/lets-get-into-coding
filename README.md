@@ -29,6 +29,8 @@ Having them setup will help you go further in getting into coding.
 
 ### 2. Initialize the Environment
 
+#### Linux and macOS
+
 1. Clone this repo:
 
    ```bash
@@ -49,19 +51,55 @@ Having them setup will help you go further in getting into coding.
    source venv/bin/activate
    ```
 
-4. Install required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. You should now be able to run `python` (without `3`):
+4. You should now be able to run `python` (without `3`):
    
    ```bash
    python --version
    ```
 
    Should return something like `Python 3.11.4`.
+
+5. Install required packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+#### Windows
+
+1. Clone this repo:
+
+   ```powershell
+   cd <wherever-you-want-your-project>
+   git clone https://github.com/mkutz/lets-get-into-coding.git
+   cd lets-get-into-coding/
+   ```
+
+2. Create a [virtual environment](https://realpython.com/python-virtual-environments-a-primer/) in the cloned directory:
+
+   ```powershell
+   python -m venv venv --upgrade-deps
+   ```
+
+3. Activate the virtual environment:
+
+   ```powershell
+   .\venv\Scripts\activate
+   ```
+
+4. You should now be able to run `python` (without `3`):
+   
+   ```powershell
+   python --version
+   ```
+
+   Should return something like `Python 3.11.4`.
+
+5. Install required packages:
+
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
 
 ## Objectives
